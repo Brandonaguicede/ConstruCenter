@@ -1,0 +1,63 @@
+@import './styles/interface.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-constru-dark font-sans antialiased selection:bg-constru-primary selection:text-white;
+    color-scheme: light;
+  }
+  html { scroll-padding-top: 6rem; }
+  h1, h2, h3 { text-wrap: balance; }
+  input, textarea, select { caret-color: #1a3b2b; }
+  input::placeholder, textarea::placeholder { color: #4b5563; opacity: 1; }
+  :focus-visible { outline: 3px solid #1a3b2b; outline-offset: 4px; }
+  button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+  button:disabled { cursor: not-allowed; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .skip-link { @apply sr-only; }
+  .skip-link:focus { @apply not-sr-only fixed top-4 left-4 z-50 bg-white text-constru-primary px-5 py-3 rounded-lg shadow-lg; }
+}
+
+
+/* Insignia de WhatsApp reutilizable: el PNG tiene margen transparente alrededor
+   del círculo verde, así que le damos fondo verde a juego para que no se vea
+   un borde blanco al recortarla en círculo. */
+.wa-badge { border-radius: 50%; background: rgb(var(--color-leaf)); object-fit: cover; flex-shrink: 0; }
+
+/* Botón flotante de WhatsApp, visible en todas las páginas públicas. */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 45;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px -8px rgb(0 0 0 / 45%);
+  transition: transform 220ms cubic-bezier(.22,1,.36,1), box-shadow 220ms ease;
+}
+.whatsapp-float .wa-badge { width: 100%; height: 100%; }
+
+.whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 14px 36px -8px rgb(0 0 0 / 55%); }
+
+@media (max-width: 767px) {
+  .whatsapp-float { right: 14px; bottom: 14px; width: 52px; height: 52px; }
+}
+
+
+

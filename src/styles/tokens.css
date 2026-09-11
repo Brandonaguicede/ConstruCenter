@@ -1,0 +1,11 @@
+:root {
+  --color-forest: 26 59 43;
+  --color-forest-hover: 18 43 31;
+  --color-leaf: 100 200 50;
+  --color-leaf-hover: 86 178 41;
+  --color-ink: 30 49 39;
+  --color-muted: 82 101 89;
+  --color-mist: 242 247 243;
+  --color-line: 216 228 220;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+}

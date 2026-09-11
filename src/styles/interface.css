@@ -1,0 +1,51 @@
+/* Shared components. Utilities retain their normal meaning. */
+@layer components {
+  .button-primary, .button-secondary, .button-highlight {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold;
+    min-height: 46px;
+    transition: background-color 180ms var(--ease-out), transform 180ms var(--ease-out);
+  }
+  .button-primary { @apply bg-constru-primary text-white hover:bg-constru-primary-hover; }
+  .button-secondary { @apply border border-constru-line bg-white text-constru-primary hover:bg-constru-mist; }
+  .button-highlight { @apply bg-constru-accent text-constru-primary hover:bg-constru-accent-hover; }
+  .button-primary:active, .button-secondary:active, .button-highlight:active { transform: scale(.98); }
+  .page-intro { @apply rounded-2xl bg-constru-mist p-6 sm:p-8; }
+  .page-intro h1 { @apply text-constru-primary; font-size: clamp(1.8rem, 3.2vw, 2.75rem); line-height: 1.18; letter-spacing: -.035em; }
+  .page-intro p { max-width: 70ch; line-height: 1.7; }
+  .surface-panel { @apply rounded-2xl border border-constru-line bg-white; }
+  .empty-state { @apply rounded-2xl bg-constru-mist px-6 py-12 text-center; }
+}
+
+:where(input:not([type='checkbox']):not([type='radio']):not([type='file']), select, textarea) {
+  min-height: 46px;
+  accent-color: rgb(var(--color-forest));
+}
+:where(input[type='checkbox'], input[type='radio']) { accent-color: rgb(var(--color-forest)); }
+:where(button, a) { touch-action: manipulation; }
+
+.public-shell main > :not(.home-page) { padding-top: 36px; padding-bottom: 72px; }
+.public-shell main { min-width: 0; }
+.public-shell main h1 { letter-spacing: -.035em; }
+.public-shell main :where(td, [data-price]) { font-variant-numeric: tabular-nums; }
+.public-shell nav[aria-label='Ruta de navegación'] { flex-wrap: wrap; row-gap: 8px; }
+
+.admin-shell { font-size: 14px; }
+.admin-shell > aside { position: sticky; top: 0; height: 100dvh; flex-shrink: 0; box-shadow: none; }
+.admin-shell main h1 { font-size: clamp(1.6rem, 2.4vw, 2rem); letter-spacing: -.035em; color: rgb(var(--color-forest)); }
+.admin-shell main table { font-variant-numeric: tabular-nums; }
+.admin-shell main thead { background: rgb(var(--color-mist)); }
+.admin-shell main th { padding-block: 16px; font-size: 12px; font-weight: 600; text-transform: none; letter-spacing: 0; }
+.admin-shell main td { padding-block: 18px; }
+.admin-shell main tbody tr { transition: background-color 160ms var(--ease-out); }
+.admin-shell main tbody tr:hover { background: rgb(var(--color-mist) / .65); }
+.admin-shell main :where(input, select, textarea) { border-color: rgb(var(--color-line)); }
+.admin-shell aside :focus-visible { outline-color: rgb(var(--color-leaf)); }
+.admin-logo { background: white; border-radius: 8px; padding: 5px; }
+.admin-login-panel { box-shadow: 0 20px 60px -32px rgb(var(--color-forest) / .22); }
+
+@media (max-width: 639px) {
+  .public-shell main > :not(.home-page) { padding-top: 24px; padding-bottom: 48px; }
+  :where(input:not([type='checkbox']):not([type='radio']), select, textarea) { font-size: 16px; }
+}
+.site-modal { width: min(672px, calc(100% - 32px)); max-height: calc(100dvh - 48px); padding: 0; border: 0; border-radius: 16px; color: rgb(var(--color-ink)); background: white; box-shadow: 0 24px 80px -24px rgb(var(--color-forest) / .4); }
+.site-modal::backdrop { background: rgb(13 32 22 / .55); }
