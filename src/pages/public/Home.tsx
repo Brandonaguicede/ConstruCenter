@@ -128,7 +128,7 @@ export const Home = () => {
 
       <section className="home-categories max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20" aria-labelledby="categories-title">
         <div className="section-heading">
-          <h2 id="categories-title" className="text-3xl sm:text-4xl font-bold tracking-tight text-constru-primary">Encuentra tu solución por categorías</h2>
+          <h2 id="categories-title" className="text-3xl sm:text-4xl font-bold tracking-tight text-constru-primary">Categorías</h2>
           <div className="section-heading-actions">
             <Link to="/productos" className="section-link">Ver todos los equipos <ArrowRight aria-hidden="true" size={18} /></Link>
             {!categoriesPending && !categoriesError && categories.length > 1 && (

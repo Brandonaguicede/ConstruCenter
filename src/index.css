@@ -48,6 +48,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  border: 3px solid white;
   box-shadow: 0 10px 30px -8px rgb(0 0 0 / 45%);
   transition: transform 220ms cubic-bezier(.22,1,.36,1), box-shadow 220ms ease;
 }

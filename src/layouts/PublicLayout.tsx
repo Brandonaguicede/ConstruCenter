@@ -96,7 +96,7 @@ export const PublicLayout = () => {
       {/* Footer Comercial */}
       <footer className="site-footer bg-constru-mist text-constru-ink pt-14 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] gap-x-8 gap-y-10 items-start mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr] gap-x-8 gap-y-10 items-start mb-12">
             {/* Columna 1: Marca & Descripción */}
             <div>
               <img
@@ -162,25 +162,6 @@ export const PublicLayout = () => {
                   <span className="pt-1.5">ventas@construcenter.cr</span>
                 </li>
               </ul>
-            </div>
-
-            {/* Columna 4: Canal de WhatsApp Directo */}
-            <div className="footer-cta rounded-2xl p-5">
-              <div className="footer-cta-icon"><WhatsappLogo weight="fill" className="w-5 h-5" /></div>
-              <h3 className="footer-heading footer-heading-cta">¿Dimensionamiento o cotización?</h3>
-              <p className="text-xs text-white/75 leading-relaxed">
-                Envíanos tu recibo eléctrico o lista de cargas. Diseñamos tu sistema fotovoltaico
-                o banco de respaldo a tu medida.
-              </p>
-              <a
-                href="https://wa.me/50685252840?text=Hola,%20deseo%20cotizar%20un%20proyecto%20de%20eficiencia%20energ%C3%A9tica"
-                target="_blank"
-                rel="noreferrer"
-                className="footer-wa-cta mt-4 inline-flex items-center justify-center gap-2.5 w-full py-2.5 px-4 rounded-full text-xs font-bold text-constru-primary bg-constru-accent hover:bg-constru-accent-hover transition-colors shadow-md"
-              >
-                <WhatsappLogo size={16} weight="fill" aria-hidden="true" />
-                <span>Chatear al +506 8525 2840</span>
-              </a>
             </div>
           </div>
 

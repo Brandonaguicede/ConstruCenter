@@ -104,7 +104,7 @@
   .button-arrow { width: 16px; height: 16px; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: 16px; }
   .section-heading-actions { width: 100%; justify-content: space-between; gap: 12px; }
-  .category-card, .combo-card, .gallery-card { flex-basis: 86%; }
+  .category-card, .combo-card, .gallery-card { flex-basis: 100%; }
   .category-copy { padding: 20px; }
   .contact-map { min-height: 320px; }
 }
